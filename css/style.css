@@ -12,12 +12,20 @@ img{
 /* common */
 :root{
     --border:1px solid white;
+    /* colors */
+    --grey:#222222;
+    --lightgrey:#4E4E4E;
+    --green:#4CCA00;
 }
 body{
     background-color: black;
     color: #fff;
     font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;  
     
+}
+
+li{
+    list-style-type: none;
 }
 
 /* gallery layout */
@@ -29,32 +37,136 @@ body{
     width: 100%;
     position: relative;
     align-items: center;
+    gap:3vh;
 }
 
 .gallery{
-    height: 90%;
-    width: 80%;
+    height: 80%;
+    width: 90%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
+    row-gap: 0.7rem;
+    margin-top: 8vh;
+
     
-    /* debug */
-    border: var(--border)
+   
 }
 
 .col{
-    width: calc(100%/7 - 1rem);
+    position: relative;
+    width: calc(100%/7 - 0.3rem);
     height: 15vh;
-    border: var(--border);
+   
 }
 
+.col img{
+    max-height: 100%;
+    min-height: 100%;
+    min-width: 100%;
+}
+
+/* user interface bar layout and styling */
 .bar-interface{
-    
+    background-color: var(--grey) ;
     width: 100%;
-    height: 10%;
-    border: var(--border); 
-    background-color: ;
+    height: 20%;
+   
+}
 
+.btn{
+    display: inline-block;
+    background-color: var(--lightgrey);
+    line-height: 4vh;
+    padding: 0 .5rem;
+    border-radius: 10px;
+}
+
+.up-btns{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.bar-interface{
+    display: flex;
+    justify-content: space-between;
 
 }
+.bar-layout{
+    height: 100%;
+
+}
+
+.right , 
+.left {
+    display: flex;
+    width: 20%;
+
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    width: 60%;
+}
+/* icons layout and styling */
+.icon-flex{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 80px;
+    
+}
+.icon-flex>div{
+    text-align: center;
+}
+.icon-flex div>i{
+    display: block;
+    font-size: 1.4rem;
+    
+}
+
+.icon-flex>i{
+    font-size: 0.7rem;
+    margin-left: 0.3rem;
+}
+
+.icon-flex span{
+    font-size: .7rem;
+}
+
+#green{
+    color: var(--green)
+}
+
+.end-meeting{
+    background-color: var(--lightgrey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    min-width: 35%;
+    height: 100%;
+    color: red;
+    cursor: pointer;
+
+}
+
+.right{
+    justify-content: flex-end;
+    
+}
+
+
+/* responsivness */
+.icon-flex:hover{
+    background-color: var(--lightgrey);
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+
+    
+
